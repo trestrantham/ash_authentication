@@ -27,7 +27,6 @@ defimpl AshAuthentication.Strategy, for: AshAuthentication.Strategy.MagicLink do
     subject_name = Info.authentication_subject_name!(strategy.resource)
 
     [
-      {"/#{subject_name}/#{strategy.name}/request", :request},
       {"/#{subject_name}/#{strategy.name}", :sign_in}
     ]
   end
